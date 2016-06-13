@@ -6,8 +6,8 @@
 class SingleRoom : public Room
 {
 public:
-	SingleRoom(ifstream& file);	// Read object data from file
-	int extraBed() const { return 0; }	// Doesn't allow bed
+    SingleRoom(ifstream& file);    // Read object data from file
+    int extraBed() const { return 0; }    // Doesn't allow bed
 };
 
 

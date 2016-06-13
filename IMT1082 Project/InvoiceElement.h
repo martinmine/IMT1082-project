@@ -11,15 +11,15 @@ using namespace std;
 class InvoiceElement : public Element
 {
 private:
-	string  description; // Description of the element
-	int     unitPrice;   // Its cost
+    string  description; // Description of the element
+    int     unitPrice;   // Its cost
 
 public:
-	InvoiceElement();   // Default constructor
-	InvoiceElement(ifstream& file);
-	~InvoiceElement();  // Deconstructor
-	void display();     // Dsiplays invoice data
-	void writeToFile(ofstream& file); // writes data to file
+    InvoiceElement();   // Default constructor
+    InvoiceElement(ifstream& file);
+    ~InvoiceElement();  // Deconstructor
+    void display();     // Dsiplays invoice data
+    void writeToFile(ofstream& file); // writes data to file
 };
 
 #endif

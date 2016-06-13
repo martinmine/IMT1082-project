@@ -31,19 +31,19 @@
 #define __LISTTOOL2_H                  //    included only ONCE in each file.
 
 
-			     //  ENUM:
+                 //  ENUM:
 enum listtype  { LIFO, FIFO, Sorted }; //  Allowed list-types.
 
 
-			     //  CLASSES:
+                 //  CLASSES:
 class Num_element;                     //  Predeclaration.
 class Text_element;                    //  Predeclaration.
 
-			     
+                 
 class Element  {                       //  Base class 'Element'.
   private:
     char element_type;                 //  Type of element: 'B'(ase), 
-				                       //    'N'(umeric) or 'T'(ext).
+                                       //    'N'(umeric) or 'T'(ext).
     friend class Num_element;          //  Only these two classes can 
     friend class Text_element;         //    manipulate 'element_type'.
 
@@ -53,7 +53,7 @@ class Element  {                       //  Base class 'Element'.
     char get_type();                   //  Return element type.
     virtual int compare (Element* el);
     virtual void display();            //  Displayed only if function is NOT
-};				                       //   redefined insided derived classes.
+};                                       //   redefined insided derived classes.
 
 
 class Num_element: public Element  {   //  Base class for all numeric 
@@ -84,29 +84,29 @@ class List  {                          //  The class 'List'.
   private:
     struct Node  {                     //  Internal struct 'node'.
       Element*  li_elem;               //  Element from the program that
-				                       //    is stored inside THIS node.
+                                       //    is stored inside THIS node.
       Node*     next;                  //  Nodes are linked together.
     };
 
     Node*     first;                   //  Pointer to first element/head.
     Node*     last;                    //  Pointer to tail. Only relevant
-				                       //    for sorted lists.
+                                       //    for sorted lists.
     listtype  li_type;                 //  'LIFO', 'FIFO' or 'Sorted'.
     int       no_in_list;              //  Number of elements in the list.
 
     Node* find_position(Element* eptr); //  Internal function. Used by
-					                    //    several other functions.
+                                        //    several other functions.
   public:
     List();                             //  Constructors.
     List(listtype li);
     ~List();                            //  Destructor.
 
-	                                    //  15 functions available for the
-					                    //    user/program. Some of them are
-					                    //    overloaded:
-					                    //  For different type of lists are
-					                    //    the following functions relevant:
- 					                    //  LIFO/FIFO   Num Sort   Text Sort
+                                        //  15 functions available for the
+                                        //    user/program. Some of them are
+                                        //    overloaded:
+                                        //  For different type of lists are
+                                        //    the following functions relevant:
+                                         //  LIFO/FIFO   Num Sort   Text Sort
     int is_empty();                     //      X          X           X 
     int no_of_elements();               //      X          X           X
     bool add(Element* el);              //      X          X           X 

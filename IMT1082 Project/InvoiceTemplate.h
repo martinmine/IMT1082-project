@@ -8,13 +8,13 @@ using namespace std;
 class InvoiceTemplate
 {
 private:
-	int     templateCount; // Amount of templates
-	string* templates;     // The templates
+    int     templateCount; // Amount of templates
+    string* templates;     // The templates
 
 public:
-	InvoiceTemplate();     // Default constructor
-	~InvoiceTemplate();    // Deconstructor
-	void display();
-	string getTemplate();
+    InvoiceTemplate();     // Default constructor
+    ~InvoiceTemplate();    // Deconstructor
+    void display();
+    string getTemplate();
 };
 #endif
