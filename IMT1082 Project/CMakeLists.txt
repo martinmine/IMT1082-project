@@ -4,4 +4,4 @@ project(imt1082)
 
 file(GLOB SOURCES "*.cpp", "*.h")
 
-add_executable(game ${SOURCES})
+add_executable(imt1082project ${SOURCES})
